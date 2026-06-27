@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regine J. Velasquez — Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* ── Contact form styles ── */
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:20px;
+}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:5px;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{
+  font-size:.70rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--tan-dark);
+}
+.form-group input,
+.form-group textarea{
+  background:rgba(255,255,255,.55);
+  border:1.5px solid rgba(160,120,72,.35);
+  border-radius:4px;
+  padding:11px 14px;
+  font-family:'Raleway',sans-serif;
+  font-size:.92rem;
+  color:var(--dark);
+  outline:none;
+  transition:border-color .2s, box-shadow .2s;
+  resize:vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color:var(--tan-dark);
+  box-shadow:0 0 0 3px rgba(160,120,72,.18);
+}
+.form-group input.invalid,
+.form-group textarea.invalid{
+  border-color:#c0392b;
+  box-shadow:0 0 0 3px rgba(192,57,43,.14);
+}
+.field-error{
+  font-size:.75rem;
+  color:#c0392b;
+  min-height:16px;
+  letter-spacing:.02em;
+}
+.form-submit{
+  margin-top:20px;
+  width:100%;
+  padding:13px;
+  font-size:1.05rem;
+  letter-spacing:.08em;
+}
+.form-submit:disabled{opacity:.6;cursor:not-allowed;transform:none!important}
+.form-note{
+  font-size:.75rem;
+  color:var(--tan-dark);
+  margin-top:10px;
+  text-align:center;
+  letter-spacing:.04em;
+}
+.form-note a{color:var(--tan-dark);text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="home.html" class="brand">RJV</a>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="profile.html">Profile</a>
+    <a href="education.html">Education</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer">
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="profile.html">Profile</a>
+  <a href="education.html">Education</a>
+  <a href="experience.html">Experience</a>
+  <a href="contact.html" class="active">Contact</a>
+</div>
+
+<section class="page-hero">
+  <h1 class="page-title">Contact</h1>
+  <p class="page-sub">Get In Touch</p>
+</section>
+
+<main>
+  <!-- Info card -->
+  <div class="card reveal">
+    <p class="card-eyebrow">Contact</p>
+    <h2>Get In Touch</h2>
+    <p>Interested in connecting or collaborating? Reach out through any of the channels below, or send a message directly using the form.</p>
+    <a href="mailto:reginejugo20@gmail.com" class="cta-btn">Send Email</a>
+    <a href="https://reginejugo20-cloud.github.io/Portfolio/" target="_blank" class="cta-btn outline">View Portfolio</a>
+    <div class="contact-block">
+      <div class="contact-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92V19a2 2 0 01-2.18 2A19.79 19.79 0 013 4.18 2 2 0 015 2h2.09a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        09922034392
+      </div>
+      <div class="contact-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        reginejugo20@gmail.com
+      </div>
+      <div class="contact-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Salaan, Mangaldan, Pangasinan
+      </div>
+      <div class="contact-item">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        reginejugo20-cloud.github.io
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Contact Form (Backend via Formspree) ── -->
+  <!--
+    HOW TO ACTIVATE THE BACKEND:
+    1. Go to https://formspree.io and sign up for free.
+    2. Create a new form — set the email to reginejugo20@gmail.com.
+    3. Copy your form ID (looks like: xabcdefg).
+    4. Replace YOUR_FORM_ID below with your actual ID.
+       Example: data-endpoint="https://formspree.io/f/xabcdefg"
+  -->
+  <div class="card reveal">
+    <p class="card-eyebrow">Send a Message</p>
+    <h2>Contact Form</h2>
+    <form
+      id="contact-form"
+      data-endpoint="https://formspree.io/f/YOUR_FORM_ID"
+      novalidate
+    >
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="cf-name">Full Name</label>
+          <input
+            type="text" id="cf-name" name="name"
+            placeholder="Juan dela Cruz"
+            required minlength="2"
+            autocomplete="name"
+          >
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email Address</label>
+          <input
+            type="email" id="cf-email" name="email"
+            placeholder="juan@email.com"
+            required
+            autocomplete="email"
+          >
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+        <div class="form-group full">
+          <label for="cf-subject">Subject</label>
+          <input
+            type="text" id="cf-subject" name="subject"
+            placeholder="Collaboration / Inquiry"
+            required minlength="2"
+          >
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+        <div class="form-group full">
+          <label for="cf-message">Message</label>
+          <textarea
+            id="cf-message" name="message"
+            rows="5"
+            placeholder="Write your message here…"
+            required minlength="10"
+          ></textarea>
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+      </div>
+      <!-- Hidden honeypot field to reduce spam -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" class="cta-btn form-submit">Send Message</button>
+      <p class="form-note">
+        Messages go directly to my inbox via
+        <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>.
+        Replace <code>YOUR_FORM_ID</code> in the HTML with your actual Formspree ID to activate.
+      </p>
+    </form>
+  </div>
+</main>
+
+<footer>&copy; 2026 &nbsp;·&nbsp; Regine J. Velasquez &nbsp;·&nbsp; Computer Science Student &nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:reginejugo20@gmail.com">reginejugo20@gmail.com</a></footer>
+<script src="shared.js"></script>
+</body>
+</html>
