@@ -6,6 +6,106 @@
 <title>Regine J. Velasquez — Experience</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
+<style>
+/* ── Timeline with certificate thumbnails ── */
+.timeline{margin-top:6px;}
+.tl-item{
+  display:flex;
+  gap:18px;
+  padding:20px 0;
+  border-bottom:1px solid rgba(90,50,10,.15);
+  align-items:flex-start;
+}
+.tl-item:last-child{border-bottom:none}
+.tl-year{
+  font-family:'EB Garamond',serif;
+  font-size:1.1rem;
+  font-weight:700;
+  color:var(--tan-dark);
+  min-width:52px;
+  padding-top:2px;
+}
+.tl-body{
+  flex:1;
+  font-size:.89rem;
+  line-height:1.65;
+  color:var(--dark);
+}
+.tl-body strong{
+  display:block;
+  font-weight:600;
+  margin-bottom:4px;
+  font-size:.97rem;
+}
+.cert-thumb{
+  width:110px;
+  height:78px;
+  object-fit:cover;
+  border-radius:4px;
+  border:2px solid rgba(160,120,72,.3);
+  cursor:pointer;
+  flex-shrink:0;
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.cert-thumb:hover{
+  transform:scale(1.04);
+  box-shadow:0 6px 20px rgba(43,29,14,.25);
+  border-color:var(--tan-dark);
+}
+.no-cert{
+  width:110px;
+  height:78px;
+  border-radius:4px;
+  border:2px dashed rgba(160,120,72,.3);
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:.65rem;
+  color:var(--tan-dark);
+  letter-spacing:.08em;
+  text-align:center;
+  padding:6px;
+}
+
+/* ── Lightbox ── */
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(20,12,4,.92);
+  z-index:1000;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.lightbox.open{display:flex}
+.lightbox img{
+  max-width:90vw;
+  max-height:88vh;
+  border-radius:6px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+.lightbox-close{
+  position:absolute;
+  top:18px;right:22px;
+  background:none;border:none;
+  color:#fff;font-size:2rem;
+  cursor:pointer;line-height:1;
+  opacity:.8;transition:opacity .2s;
+}
+.lightbox-close:hover{opacity:1}
+.lightbox-label{
+  position:absolute;
+  bottom:22px;left:50%;
+  transform:translateX(-50%);
+  color:#e2c9a8;
+  font-family:'EB Garamond',serif;
+  font-size:1rem;
+  letter-spacing:.06em;
+  white-space:nowrap;
+}
+</style>
 </head>
 <body>
 
@@ -42,46 +142,81 @@
     <p class="card-eyebrow">Certificates &amp; Experience</p>
     <h2>Achievements</h2>
     <div class="timeline">
+
       <div class="tl-item">
         <div class="tl-year">2026</div>
         <div class="tl-body">
           <strong>AI Fluency Certificate</strong>
-          Completed an AI fluency program covering foundational AI concepts and responsible use.
+          Completed an AI Fluency: Framework &amp; Foundations program by Anthropic, covering foundational AI concepts and responsible use.
         </div>
+        <img class="cert-thumb" src="cert-ai.jpg" alt="AI Fluency Certificate"
+             onclick="openLightbox(this.src, 'AI Fluency Certificate — Anthropic')">
       </div>
+
       <div class="tl-item">
-          <div class="tl-year">2026</div>
-          <div class="tl-body">
-            <strong>OJT Certificate</strong>
-          Completed an OJT in LGU of Agoo, Accounting Office.
+        <div class="tl-year">2026</div>
+        <div class="tl-body">
+          <strong>OJT Certificate</strong>
+          Completed On the Job Training (240 hours) at the Municipal Accounting Office, LGU of Agoo, La Union. May 4 – June 17, 2026.
         </div>
+        <img class="cert-thumb" src="cert-ojt.jpg" alt="OJT Certificate"
+             onclick="openLightbox(this.src, 'OJT Certificate — Municipality of Agoo')">
       </div>
+
       <div class="tl-item">
-          <div class="tl-year">2026</div>
-          <div class="tl-body">
-            <strong>OJT Training Certificate</strong>
-          Completed an OJT Training via Zoom.
+        <div class="tl-year">2026</div>
+        <div class="tl-body">
+          <strong>OJT Training Certificate</strong>
+          Certificate of Participation in the Internship Orientation Program held online (April 24, 2026) — DMMMSU College of Computer Science.
         </div>
+        <img class="cert-thumb" src="cert-ojt-training.jpg" alt="OJT Training Certificate"
+             onclick="openLightbox(this.src, 'OJT Training Certificate — DMMMSU')">
       </div>
+
       <div class="tl-item">
         <div class="tl-year">2025</div>
         <div class="tl-body">
           <strong>Data Science Certificate</strong>
-          Hands-on training in data wrangling, visualization, and statistical analysis.
+          Data Science Essentials with Python — offered by DICT-ITU DTC Initiative through the Cisco Networking Academy program. Completed October 13, 2025.
         </div>
+        <img class="cert-thumb" src="cert-datasci.jpg" alt="Data Science Certificate"
+             onclick="openLightbox(this.src, 'Data Science Certificate — Cisco Networking Academy')">
       </div>
+
       <div class="tl-item">
         <div class="tl-year">2025</div>
         <div class="tl-body">
           <strong>Natural Language Processing Certificate</strong>
-          Covered text classification, tokenization, and language model fundamentals.
+          Introduction to Natural Language Processing — Great Learning. Covered text classification, tokenization, and language model fundamentals.
         </div>
+        <div class="no-cert">Certificate<br>coming soon</div>
       </div>
+
     </div>
   </div>
 </main>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+  <span class="lightbox-label" id="lightbox-label"></span>
+</div>
+
 <footer>&copy; 2026 &nbsp;·&nbsp; Regine J. Velasquez &nbsp;·&nbsp; Computer Science Student &nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:reginejugo20@gmail.com">reginejugo20@gmail.com</a></footer>
 <script src="shared.js"></script>
+<script>
+function openLightbox(src, label){
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-label').textContent = label;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+</script>
 </body>
 </html>
