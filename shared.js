@@ -100,7 +100,7 @@ if(contactForm){
 
     // Formspree endpoint — replace YOUR_FORM_ID with your actual Formspree ID
     // Sign up free at formspree.io, create a form, and paste your endpoint below.
-    const FORMSPREE_ENDPOINT = contactForm.dataset.endpoint || 'https://formspree.io/f/YOUR_FORM_ID';
+    const FORMSPREE_ENDPOINT = contactForm.dataset.endpoint || 'https://api.web3forms.com/submit';
 
     try{
       const res = await fetch(FORMSPREE_ENDPOINT, {
