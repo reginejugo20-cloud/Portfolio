@@ -98,8 +98,6 @@ if(contactForm){
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    // Formspree endpoint — replace YOUR_FORM_ID with your actual Formspree ID
-    // Sign up free at formspree.io, create a form, and paste your endpoint below.
     const FORMSPREE_ENDPOINT = contactForm.dataset.endpoint || 'https://api.web3forms.com/submit';
 
     try{
